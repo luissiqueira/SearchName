@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block extra_head %}
+    <style>
+        p label {
+            width: 140px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <h2>{% firstof object.name 'Novo registro' %}</h2>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <a class="btn btn-default" href="{{ object.get_absolute_url }}" role="button">Cancelar</a>
+        <input class="btn btn-default" type="submit" value="Salvar">
+    </form>
+
+{% endblock %}

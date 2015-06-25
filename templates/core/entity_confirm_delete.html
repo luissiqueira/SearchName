@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Deletar "{{ object.name }}"</h2>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Deseja realmente excluir "{{ object }}"?</p>
+        <a class="btn btn-default" href="{{ object.get_absolute_url }}" role="button">Cancelar</a>
+        <input class="btn btn-default" type="submit" value="Sim">
+    </form>
+{% endblock %}

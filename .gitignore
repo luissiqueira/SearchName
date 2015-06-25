@@ -1,0 +1,4 @@
+celerybeat.pid
+celerybeat-schedule.db
+db.sqlite3
+.idea/*

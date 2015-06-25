@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Registro</h2>
+
+    <section style="padding: 30px 0">
+        <div class="row">
+            <div class="col-md-2 text-right"><strong>Number</strong></div>
+            <div class="col-md-10">{{ object.number }}</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 text-right"><strong>Name</strong></div>
+            <div class="col-md-10">{{ object.name }}</div>
+        </div>
+    </section>
+
+    <section>
+        <a class="btn btn-default" href="{% url 'entities' %}" role="button">Voltar</a>
+        <a class="btn btn-default" href="{% url 'entity-delete' object.number %}" role="button">Apagar</a>
+        <a class="btn btn-default" href="{% url 'entity-edit' object.number %}"
+           role="button">Editar</a>
+    </section>
+
+{% endblock %}

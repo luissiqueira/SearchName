@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head lang="pt-br">
+    <meta charset="UTF-8">
+    <title>{% block title %}SearchName - Sample App{% endblock %}</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="{% static 'custom-style.css' %}">
+
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+{% include 'includes/topbar.html' %}
+
+<div class="container" style="padding: 20px">
+    {% block content %}
+
+        <div class="starter-template">
+            <h1>Em construção!</h1>
+
+            <p class="lead">A página atual encontra-se em construção.</p>
+        </div>
+
+    {% endblock %}
+</div>
+<!-- /.container -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+{% block post_body %}{% endblock %}
+
+</body>
+</html>
